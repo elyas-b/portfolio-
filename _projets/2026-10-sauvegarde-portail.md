@@ -2,7 +2,7 @@
 title: "Atelier Portfolio"
 date: 2026-10-07
 cadre: "Atelier de professionnalisation"
-resume: "Création d'un portfolio "HTML et CSS""
+resume: "Création d'un portfolio "HTML et CSS"."
 competences: [c2]
 ---
 
