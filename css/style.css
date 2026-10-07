@@ -1,5 +1,6 @@
 /* =========================================================
-   PORTFOLIO BTS SIO — DESIGN
+   PORTFOLIO BTS SIO — DESIGN (version corrigée)
+   À placer dans : css/style.css
    ========================================================= */
 
 :root {
@@ -22,9 +23,7 @@
 }
 
 
-/* =========================================================
-   BASE
-   ========================================================= */
+/* ---------- BASE ---------- */
 
 * {
     box-sizing: border-box;
@@ -40,16 +39,13 @@ body {
         radial-gradient(circle at 90% 5%, #dbeafe 0, transparent 25%),
         var(--background);
     color: var(--text);
-
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.7;
 }
 
 
-/* =========================================================
-   STRUCTURE
-   ========================================================= */
+/* ---------- STRUCTURE ---------- */
 
 header,
 main,
@@ -59,7 +55,7 @@ footer {
 }
 
 header {
-    padding: 70px 0 55px;
+    padding: 40px 0 10px;
 }
 
 main {
@@ -69,107 +65,81 @@ main {
 footer {
     padding: 30px 0 45px;
     border-top: 1px solid var(--border);
+    color: var(--text-light);
+    font-size: 0.9rem;
 }
 
 
-/* =========================================================
-   EN-TÊTE / HERO
-   ========================================================= */
-
-header {
-    position: relative;
-}
+/* ---------- EN-TÊTE + NAVIGATION ---------- */
 
 header::before {
     content: "";
     display: block;
-
     width: 55px;
     height: 5px;
-
-    margin-bottom: 25px;
-
-    background: linear-gradient(
-        90deg,
-        var(--primary),
-        var(--cyan)
-    );
-
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, var(--primary), var(--cyan));
     border-radius: 10px;
 }
 
-header h1 {
-    margin: 0;
-
-    color: var(--text);
-
-    font-size: clamp(2.4rem, 6vw, 4.2rem);
+header .site {
+    margin: 0 0 15px;
+    font-size: 1.1rem;
     font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -2px;
 }
 
-header .sous-titre {
-    max-width: 650px;
-
-    margin: 18px 0 0;
-
-    color: var(--text-light);
-
-    font-size: 1.15rem;
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
-nav {
-    margin-bottom: 35px;
+header .site a {
+    color: var(--text);
 }
 
 nav ul {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-
     margin: 0;
     padding: 0;
-
     list-style: none;
 }
 
 nav a {
     display: inline-block;
-
     padding: 8px 15px;
-
     color: var(--text-light);
-
     border: 1px solid transparent;
     border-radius: 8px;
-
     font-size: 0.9rem;
     font-weight: 600;
-
     transition: 0.2s ease;
 }
 
 nav a:hover {
     color: var(--primary);
-
     background: var(--surface);
-
     border-color: var(--border-blue);
-
     text-decoration: none;
 }
 
 
-/* =========================================================
-   TEXTE GÉNÉRAL
-   ========================================================= */
+/* ---------- TITRE PRINCIPAL (accueil + pages projets) ---------- */
+
+main h1 {
+    margin: 40px 0 0;
+    color: var(--text);
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+main .sous-titre {
+    max-width: 650px;
+    margin: 15px 0 0;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+
+/* ---------- TEXTE GÉNÉRAL ---------- */
 
 p {
     color: var(--text-light);
@@ -187,36 +157,24 @@ a:hover {
 }
 
 
-/* =========================================================
-   TITRES DE SECTIONS
-   ========================================================= */
+/* ---------- TITRES DE SECTIONS ---------- */
 
 h2 {
     display: flex;
     align-items: center;
     gap: 12px;
-
-    margin: 65px 0 25px;
-
+    margin: 60px 0 25px;
     color: var(--text);
-
     font-size: 1.8rem;
     line-height: 1.2;
 }
 
 h2::before {
     content: "";
-
     width: 7px;
     height: 30px;
-
     flex-shrink: 0;
-
-    background: linear-gradient(
-        var(--primary),
-        var(--cyan)
-    );
-
+    background: linear-gradient(var(--primary), var(--cyan));
     border-radius: 10px;
 }
 
@@ -226,96 +184,56 @@ h3 {
 }
 
 
-/* =========================================================
-   PROFIL
-   ========================================================= */
+/* ---------- PROFIL ----------
+   Demande : <h2 id="profil">Profil</h2> dans index.html */
 
-#Profil + p {
+#profil + p {
     margin: 0;
-
     max-width: 850px;
-
     padding: 25px 28px;
-
     background: var(--surface);
-
     border: 1px solid var(--border);
     border-left: 4px solid var(--primary);
     border-radius: 0 14px 14px 0;
-
     box-shadow: var(--shadow);
-
     font-size: 1.02rem;
 }
 
 
-/* =========================================================
-   CARTES DES PROJETS
-   ========================================================= */
+/* ---------- CARTES DES PROJETS ---------- */
 
 .carte {
     position: relative;
-
     display: block;
-
     margin: 20px 0;
     padding: 28px 30px;
-
     background: var(--surface);
-
     border: 1px solid var(--border);
     border-radius: 16px;
-
     box-shadow: var(--shadow);
-
     overflow: hidden;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
-
-
-/* petite ligne colorée sur le côté */
 
 .carte::before {
     content: "";
-
     position: absolute;
-
     top: 0;
     left: 0;
-
     width: 4px;
     height: 100%;
-
-    background: linear-gradient(
-        180deg,
-        var(--primary),
-        var(--cyan)
-    );
+    background: linear-gradient(180deg, var(--primary), var(--cyan));
 }
-
-
-/* effet au passage de la souris */
 
 .carte:hover {
     transform: translateY(-5px);
-
     border-color: var(--border-blue);
-
     box-shadow: var(--shadow-hover);
 }
 
-
-/* titre du projet */
-
 .carte h3 {
     margin: 0 0 8px;
-
     padding-left: 5px;
-
     font-size: 1.3rem;
 }
 
@@ -328,174 +246,140 @@ h3 {
     text-decoration: none;
 }
 
-
-/* description */
-
 .carte p {
     margin: 8px 0;
 }
 
 
-/* =========================================================
-   MÉTADONNÉES DES PROJETS
-   ========================================================= */
+/* ---------- MÉTADONNÉES (class="meta") ---------- */
 
-.Meta {
+.meta {
     display: inline-block;
-
     margin-top: 10px !important;
     padding: 5px 10px;
-
     color: var(--primary) !important;
-
     background: var(--surface-blue);
-
     border: 1px solid var(--border-blue);
     border-radius: 6px;
-
     font-size: 0.82rem !important;
     font-weight: 600;
 }
 
 
-/* =========================================================
-   LISTE DES COMPÉTENCES
-   ========================================================= */
+/* ---------- COMPÉTENCES (page projet) ----------
+   Demande : class="comp-tag" à la place de class="comp" dans le layout projet */
 
 .comp-liste {
     margin-top: 20px;
-
     color: var(--text-light);
-
     font-size: 0.95rem;
 }
 
+.comp-tag {
+    display: inline-block;
+    margin: 4px 6px 0 0;
+    padding: 3px 10px;
+    color: var(--primary);
+    background: var(--surface-blue);
+    border: 1px solid var(--border-blue);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
 
-/* =========================================================
-   TABLEAU
-   ========================================================= */
 
-.comp {
+/* ---------- TABLEAU (class="defile") ---------- */
+
+.defile {
+    width: 100%;
     margin-top: 20px;
-
     padding: 10px;
-
     background: var(--surface);
-
     border: 1px solid var(--border);
     border-radius: 16px;
-
     box-shadow: var(--shadow);
-
     overflow-x: auto;
 }
 
 table {
     width: 100%;
-
     border-collapse: separate;
     border-spacing: 0;
-
     font-size: 0.92rem;
 }
 
 th,
 td {
     padding: 15px;
-
     border-bottom: 1px solid var(--border);
-
     text-align: left;
     vertical-align: middle;
 }
 
-th {
+/* ligne d'en-tête (haut) */
+thead th {
     color: white;
-
     background: #172554;
-
     font-weight: 700;
 }
 
-th:first-child {
+thead th a {
+    color: white;
+}
+
+thead th:first-child {
     border-radius: 8px 0 0 0;
 }
 
-th:last-child {
+thead th:last-child {
     border-radius: 0 8px 0 0;
 }
 
-tr:last-child td {
+/* première colonne (noms des compétences) */
+tbody th {
+    color: var(--text);
+    font-weight: 600;
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
     border-bottom: none;
 }
 
-tr:hover td {
+tbody tr:hover th,
+tbody tr:hover td {
     background: var(--surface-blue);
 }
 
-td.Affaire {
+/* cases avec la croix (class="case") */
+td.case {
     color: var(--primary);
-
     text-align: center;
-
     font-weight: 800;
 }
 
 
-/* =========================================================
-   ZONE DE DÉFILEMENT DU TABLEAU
-   ========================================================= */
-
-.défilé {
-    width: 100%;
-
-    overflow-x: auto;
-}
-
-
-/* =========================================================
-   IMAGES
-   ========================================================= */
+/* ---------- IMAGES ---------- */
 
 img {
     max-width: 100%;
     height: auto;
-
     border-radius: 12px;
 }
 
 
-/* =========================================================
-   CODE
-   ========================================================= */
+/* ---------- CODE ---------- */
 
 code {
     padding: 3px 7px;
-
     color: var(--primary-dark);
-
     background: #eff6ff;
-
     border-radius: 5px;
-
     font-size: 0.9em;
 }
 
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer {
-    color: var(--text-light);
-
-    font-size: 0.9rem;
-}
-
-
-/* =========================================================
-   PETITS ÉCRANS
-   ========================================================= */
+/* ---------- PETITS ÉCRANS ---------- */
 
 @media (max-width: 650px) {
 
@@ -506,15 +390,15 @@ footer {
     }
 
     header {
-        padding: 45px 0 35px;
+        padding: 30px 0 5px;
     }
 
-    header h1 {
-        font-size: 2.5rem;
+    main h1 {
+        font-size: 2.3rem;
         letter-spacing: -1px;
     }
 
-    header .sous-titre {
+    main .sous-titre {
         font-size: 1rem;
     }
 
@@ -527,7 +411,7 @@ footer {
         padding: 22px 20px;
     }
 
-    #Profil + p {
+    #profil + p {
         padding: 20px;
     }
 
