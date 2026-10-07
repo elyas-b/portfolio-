@@ -21,7 +21,7 @@ Le matériel, les logiciels, seul ou en équipe.
 
 ## Productions et preuves
 
-![Ce que montre la capture]({{ "/Capture d'écran 2026-10-07 183004.png" | relative_url }})
+![Ce que montre la capture]({{ "/Capture-portfolio.png" | relative_url }})
 
 ## Ce que j'en retiens
 
