@@ -1,11 +1,12 @@
 :root {
-    --fond: #0f172a;
-    --bloc: #172033;
-    --bloc-hover: #1d2940;
-    --texte: #e5e7eb;
-    --secondaire: #94a3b8;
-    --bleu: #38bdf8;
-    --bordure: #26364f;
+    --fond: #0b1120;
+    --fond-clair: #111a2e;
+    --carte: #151f35;
+    --texte: #edf4ff;
+    --gris: #91a0b8;
+    --accent: #00c2ff;
+    --accent-2: #7c5cff;
+    --bordure: #263653;
 }
 
 * {
@@ -20,43 +21,56 @@ body {
     line-height: 1.6;
 }
 
+/* Contenu */
+
 header,
 main,
 footer {
-    width: min(950px, 90%);
+    width: 900px;
+    max-width: 90%;
     margin: auto;
 }
 
 /* En-tête */
 
 header {
-    padding: 55px 0 35px;
-    border-bottom: 1px solid var(--bordure);
+    padding: 70px 0 55px;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: var(--accent);
+    margin-bottom: 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.8rem;
-    color: white;
+    font-size: 3rem;
+    letter-spacing: -1px;
 }
 
-header .sous-titre {
-    margin-top: 8px;
-    color: var(--bleu);
+.sous-titre {
+    color: var(--gris);
     font-size: 1.1rem;
+    margin-top: 8px;
 }
 
-/* Sections */
-
-main {
-    padding: 25px 0 50px;
-}
+/* Titres */
 
 h2 {
-    margin-top: 45px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--bordure);
+    margin-top: 50px;
+    margin-bottom: 22px;
+    font-size: 1.5rem;
     color: white;
+}
+
+h2::before {
+    content: "// ";
+    color: var(--accent);
 }
 
 h3 {
@@ -64,54 +78,76 @@ h3 {
 }
 
 p {
-    color: var(--secondaire);
+    color: var(--gris);
 }
 
 a {
-    color: var(--bleu);
+    color: var(--accent);
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: white;
+}
+
+/* Profil */
+
+#Profil + p {
+    background: var(--fond-clair);
+    border-left: 3px solid var(--accent);
+    padding: 18px 22px;
+    border-radius: 0 8px 8px 0;
 }
 
 /* Projets */
 
 .carte {
-    background: var(--bloc);
+    background: var(--carte);
     border: 1px solid var(--bordure);
-    border-radius: 12px;
-    padding: 22px;
+    border-radius: 10px;
+    padding: 24px;
     margin: 18px 0;
-    transition: .2s;
+    position: relative;
 }
 
-.carte:hover {
-    background: var(--bloc-hover);
-    border-color: var(--bleu);
-    transform: translateY(-3px);
+.carte::before {
+    content: "PROJET";
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    color: var(--accent);
+    font-size: .7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .carte h3 {
     margin-bottom: 8px;
+    padding-right: 70px;
 }
 
 .carte p {
-    margin: 7px 0;
+    margin: 6px 0;
 }
 
+.carte:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(0, 194, 255, .08);
+}
+
+/* Informations des projets */
+
 .Meta {
-    color: #64748b;
+    color: #687992;
     font-size: .85rem;
 }
 
 /* Compétences */
 
 .comp {
-    background: var(--bloc);
+    background: var(--carte);
     border: 1px solid var(--bordure);
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 12px;
     overflow-x: auto;
 }
@@ -123,14 +159,14 @@ table {
 
 th,
 td {
-    padding: 12px;
+    padding: 13px;
     border-bottom: 1px solid var(--bordure);
     text-align: left;
 }
 
 th {
-    color: var(--bleu);
-    background: #111c30;
+    color: var(--accent);
+    background: var(--fond-clair);
 }
 
 td.Affaire {
@@ -149,26 +185,32 @@ img {
 /* Bas de page */
 
 footer {
-    padding: 30px 0;
+    margin-top: 60px;
+    padding: 25px 0;
     border-top: 1px solid var(--bordure);
-    color: var(--secondaire);
+    color: var(--gris);
     font-size: .85rem;
 }
 
 /* Téléphone */
 
 @media (max-width: 600px) {
+
     header h1 {
-        font-size: 2.1rem;
+        font-size: 2.2rem;
     }
 
     header,
     main,
     footer {
-        width: 92%;
+        max-width: 92%;
     }
 
-    .carte {
-        padding: 18px;
+    .carte::before {
+        display: none;
+    }
+
+    .carte h3 {
+        padding-right: 0;
     }
 }
