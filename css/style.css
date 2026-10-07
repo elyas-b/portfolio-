@@ -1,216 +1,538 @@
+/* =========================================================
+   PORTFOLIO BTS SIO — DESIGN
+   ========================================================= */
+
 :root {
-    --fond: #0b1120;
-    --fond-clair: #111a2e;
-    --carte: #151f35;
-    --texte: #edf4ff;
-    --gris: #91a0b8;
-    --accent: #00c2ff;
-    --accent-2: #7c5cff;
-    --bordure: #263653;
+    --background: #f6f8fc;
+    --surface: #ffffff;
+    --surface-blue: #f0f6ff;
+
+    --text: #172033;
+    --text-light: #64748b;
+
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --cyan: #06b6d4;
+
+    --border: #e2e8f0;
+    --border-blue: #bfdbfe;
+
+    --shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+    --shadow-hover: 0 14px 35px rgba(15, 23, 42, 0.12);
 }
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
 
 * {
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    background: var(--fond);
-    color: var(--texte);
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Contenu */
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at 90% 5%, #dbeafe 0, transparent 25%),
+        var(--background);
+    color: var(--text);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   STRUCTURE
+   ========================================================= */
 
 header,
 main,
 footer {
-    width: 900px;
-    max-width: 90%;
-    margin: auto;
+    width: min(1000px, 90%);
+    margin: 0 auto;
 }
-
-/* En-tête */
 
 header {
     padding: 70px 0 55px;
+}
+
+main {
+    padding-bottom: 70px;
+}
+
+footer {
+    padding: 30px 0 45px;
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   EN-TÊTE / HERO
+   ========================================================= */
+
+header {
     position: relative;
 }
 
 header::before {
     content: "";
     display: block;
+
     width: 55px;
-    height: 4px;
-    background: var(--accent);
-    margin-bottom: 20px;
+    height: 5px;
+
+    margin-bottom: 25px;
+
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--cyan)
+    );
+
+    border-radius: 10px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 3rem;
-    letter-spacing: -1px;
+
+    color: var(--text);
+
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -2px;
 }
 
-.sous-titre {
-    color: var(--gris);
-    font-size: 1.1rem;
-    margin-top: 8px;
+header .sous-titre {
+    max-width: 650px;
+
+    margin: 18px 0 0;
+
+    color: var(--text-light);
+
+    font-size: 1.15rem;
+    line-height: 1.7;
 }
 
-/* Titres */
 
-h2 {
-    margin-top: 50px;
-    margin-bottom: 22px;
-    font-size: 1.5rem;
-    color: white;
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+    margin-bottom: 35px;
 }
 
-h2::before {
-    content: "// ";
-    color: var(--accent);
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
 }
 
-h3 {
-    margin-top: 0;
+nav a {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    color: var(--text-light);
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition: 0.2s ease;
 }
+
+nav a:hover {
+    color: var(--primary);
+
+    background: var(--surface);
+
+    border-color: var(--border-blue);
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   TEXTE GÉNÉRAL
+   ========================================================= */
 
 p {
-    color: var(--gris);
+    color: var(--text-light);
 }
 
 a {
-    color: var(--accent);
+    color: var(--primary);
+    font-weight: 600;
     text-decoration: none;
 }
 
 a:hover {
-    color: white;
+    color: var(--primary-dark);
+    text-decoration: underline;
 }
 
-/* Profil */
+
+/* =========================================================
+   TITRES DE SECTIONS
+   ========================================================= */
+
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 65px 0 25px;
+
+    color: var(--text);
+
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+h2::before {
+    content: "";
+
+    width: 7px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    background: linear-gradient(
+        var(--primary),
+        var(--cyan)
+    );
+
+    border-radius: 10px;
+}
+
+h3 {
+    color: var(--text);
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   PROFIL
+   ========================================================= */
 
 #Profil + p {
-    background: var(--fond-clair);
-    border-left: 3px solid var(--accent);
-    padding: 18px 22px;
-    border-radius: 0 8px 8px 0;
+    margin: 0;
+
+    max-width: 850px;
+
+    padding: 25px 28px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 14px 14px 0;
+
+    box-shadow: var(--shadow);
+
+    font-size: 1.02rem;
 }
 
-/* Projets */
+
+/* =========================================================
+   CARTES DES PROJETS
+   ========================================================= */
 
 .carte {
-    background: var(--carte);
-    border: 1px solid var(--bordure);
-    border-radius: 10px;
-    padding: 24px;
-    margin: 18px 0;
     position: relative;
+
+    display: block;
+
+    margin: 20px 0;
+    padding: 28px 30px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
 }
+
+
+/* petite ligne colorée sur le côté */
 
 .carte::before {
-    content: "PROJET";
+    content: "";
+
     position: absolute;
-    top: 15px;
-    right: 18px;
-    color: var(--accent);
-    font-size: .7rem;
-    font-weight: bold;
-    letter-spacing: 1px;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(
+        180deg,
+        var(--primary),
+        var(--cyan)
+    );
 }
 
-.carte h3 {
-    margin-bottom: 8px;
-    padding-right: 70px;
-}
 
-.carte p {
-    margin: 6px 0;
-}
+/* effet au passage de la souris */
 
 .carte:hover {
-    border-color: var(--accent);
-    box-shadow: 0 0 20px rgba(0, 194, 255, .08);
+    transform: translateY(-5px);
+
+    border-color: var(--border-blue);
+
+    box-shadow: var(--shadow-hover);
 }
 
-/* Informations des projets */
+
+/* titre du projet */
+
+.carte h3 {
+    margin: 0 0 8px;
+
+    padding-left: 5px;
+
+    font-size: 1.3rem;
+}
+
+.carte h3 a {
+    color: var(--text);
+}
+
+.carte h3 a:hover {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+
+/* description */
+
+.carte p {
+    margin: 8px 0;
+}
+
+
+/* =========================================================
+   MÉTADONNÉES DES PROJETS
+   ========================================================= */
 
 .Meta {
-    color: #687992;
-    font-size: .85rem;
+    display: inline-block;
+
+    margin-top: 10px !important;
+    padding: 5px 10px;
+
+    color: var(--primary) !important;
+
+    background: var(--surface-blue);
+
+    border: 1px solid var(--border-blue);
+    border-radius: 6px;
+
+    font-size: 0.82rem !important;
+    font-weight: 600;
 }
 
-/* Compétences */
+
+/* =========================================================
+   LISTE DES COMPÉTENCES
+   ========================================================= */
+
+.comp-liste {
+    margin-top: 20px;
+
+    color: var(--text-light);
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   TABLEAU
+   ========================================================= */
 
 .comp {
-    background: var(--carte);
-    border: 1px solid var(--bordure);
-    border-radius: 10px;
-    padding: 12px;
+    margin-top: 20px;
+
+    padding: 10px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+
     overflow-x: auto;
 }
 
 table {
     width: 100%;
-    border-collapse: collapse;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    font-size: 0.92rem;
 }
 
 th,
 td {
-    padding: 13px;
-    border-bottom: 1px solid var(--bordure);
+    padding: 15px;
+
+    border-bottom: 1px solid var(--border);
+
     text-align: left;
+    vertical-align: middle;
 }
 
 th {
-    color: var(--accent);
-    background: var(--fond-clair);
+    color: white;
+
+    background: #172554;
+
+    font-weight: 700;
+}
+
+th:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+th:last-child {
+    border-radius: 0 8px 0 0;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: var(--surface-blue);
 }
 
 td.Affaire {
+    color: var(--primary);
+
     text-align: center;
-    font-weight: bold;
+
+    font-weight: 800;
 }
 
-/* Images */
+
+/* =========================================================
+   ZONE DE DÉFILEMENT DU TABLEAU
+   ========================================================= */
+
+.défilé {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
 
 img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+
+    border-radius: 12px;
 }
 
-/* Bas de page */
+
+/* =========================================================
+   CODE
+   ========================================================= */
+
+code {
+    padding: 3px 7px;
+
+    color: var(--primary-dark);
+
+    background: #eff6ff;
+
+    border-radius: 5px;
+
+    font-size: 0.9em;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
-    margin-top: 60px;
-    padding: 25px 0;
-    border-top: 1px solid var(--bordure);
-    color: var(--gris);
-    font-size: .85rem;
+    color: var(--text-light);
+
+    font-size: 0.9rem;
 }
 
-/* Téléphone */
 
-@media (max-width: 600px) {
+/* =========================================================
+   PETITS ÉCRANS
+   ========================================================= */
 
-    header h1 {
-        font-size: 2.2rem;
-    }
+@media (max-width: 650px) {
 
     header,
     main,
     footer {
-        max-width: 92%;
+        width: 92%;
     }
 
-    .carte::before {
-        display: none;
+    header {
+        padding: 45px 0 35px;
     }
 
-    .carte h3 {
-        padding-right: 0;
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+    }
+
+    header .sous-titre {
+        font-size: 1rem;
+    }
+
+    h2 {
+        margin-top: 45px;
+        font-size: 1.5rem;
+    }
+
+    .carte {
+        padding: 22px 20px;
+    }
+
+    #Profil + p {
+        padding: 20px;
+    }
+
+    th,
+    td {
+        padding: 10px;
     }
 }
