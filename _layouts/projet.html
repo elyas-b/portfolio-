@@ -6,7 +6,7 @@ layout: default
   <p class="sous-titre">{{ page.date | date: "%m/%Y" }} · {{ page.cadre }}</p>
 
   <p class="comp-liste">Compétences :
-  {% for c in page.competences %}{% assign comp = site.data.competences | where: "code", c | first %}<span class="comp">{{ comp.libelle }}</span>{% endfor %}
+  {% for c in page.competences %}{% assign comp = site.data.competences | where: "code", c | first %}<span class="comp-tag">{{ comp.libelle }}</span>{% endfor %}}
   </p>
 
   {{ content }}
