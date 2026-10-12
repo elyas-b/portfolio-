@@ -3,7 +3,7 @@ title: "Création et mise en ligne de mon portfolio"
 date: 2026-10-07
 cadre: "Atelier de professionnalisation"
 resume: "Création d’un portfolio professionnel en HTML/CSS pour présenter mes compétences et mes réalisations, puis publication du site avec GitHub Pages."
-competences: [c3] [c4]
+competences: [c2]
 ---
 
 ## Contexte
