@@ -8,16 +8,23 @@ competences: [c2]
 
 ## Contexte
 
-Qui a demandé quoi, dans quelle organisation, et pourquoi c'était nécessaire.
+Un devoir imposé par mon professeur d’informatique dans le but de préparer mon portfolio pour l’année prochaine, afin de documenter mes réalisations au cours de l’année et de conserver une trace écrite de mon parcours durant mes études.
 
 ## Conditions et moyens
 
-Le matériel, les logiciels, seul ou en équipe.
+- Utilisation de GitHub pour héberger et organiser mon projet.
+
+- Utilisation de Visual Studio Code pour écrire et modifier le code HTML et CSS.
+
+- Utilisation de mes ressources personnelles et des supports de cours pour réaliser le projet.
+
+- Travail réalisé sur mon ordinateur personnel, en autonomie, tout en respectant les consignes de mon professeur..
 
 ## Description de l'activité
 
-1. Première étape, avec la commande ou le réglage réellement employé.
-2. Deuxième étape.
+1. À partir d’un modèle de base très simple, j’ai commencé à créer mon portfolio, que j’ai progressivement amélioré au fil du temps. Je me suis documenté sur Internet et à l’aide de l’IA afin de construire une base solide.
+
+2. Dans un deuxième temps, j’ai intégré mes réalisations en ajoutant des captures d’écran accompagnées de descriptions détaillées.
 
 ## Productions et preuves
 
@@ -25,4 +32,4 @@ Le matériel, les logiciels, seul ou en équipe.
 
 ## Ce que j'en retiens
 
-Une difficulté rencontrée et la façon dont vous l'avez réglée.
+J’ai rencontré de nombreuses erreurs de code. Je retiens de cette expérience la complexité du développement informatique, ainsi que l’importance de la précision et de l’amélioration continue du code.
