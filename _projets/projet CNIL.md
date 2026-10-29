@@ -28,13 +28,13 @@ Apprentissage de 4 modules sur le RGPD et ses règles.
 
 ## Productions et preuves
 
-![Ce que montre la capture]({{ "/images/Certificat_1.pdf" | relative_url }})
+![Ce que montre la capture]({{ "/images/Certificat_1.png" | relative_url }})
 
-![Ce que montre la capture]({{ "/images/Attestation_de_suivi.pdf" | relative_url }})
+![Ce que montre la capture]({{ "/images/Attestation_de_suivi.png" | relative_url }})
 
-![Ce que montre la capture]({{ "/images/Certificat_3.pdf" | relative_url }})
+![Ce que montre la capture]({{ "/images/Certificat_3.png" | relative_url }})
 
-![Ce que montre la capture]({{ "/images/Certificat_4.pdf" | relative_url }})
+![Ce que montre la capture]({{ "/images/Certificat_4.png" | relative_url }})
 
 ## Ce que j'en retiens
 
