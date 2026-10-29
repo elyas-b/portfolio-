@@ -8,7 +8,7 @@ competences: [c6]
 
 ## Contexte
 
-L’attestation du RGPD était obligatoire dans le cadre de notre formation, nous devions donc suivre les quatre modules et les apprendre afin de comprendre l’importance de la protection des données personnelles.
+L’attestation du RGPD était obligatoire dans le cadre de notre formation, nous devions donc suivre les quatre modules et les apprendre afin de comprendre l’importance de la protection des données personnelles. 
 
 ## Conditions et moyens
 
