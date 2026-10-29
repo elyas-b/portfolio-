@@ -1,23 +1,30 @@
 ---
-title: "Intitulé du projet"
-date: 2026-10-07
-cadre: "Atelier de professionnalisation"
-resume: "Une phrase : ce que vous avez fait, et pour qui."
-competences: [c2]
+title: "Attestation de suivi MOOC CNIL "
+date: 2026-10-29
+cadre: "Devoir"
+resume: "Suivi des modules de formation sur le RGPD disponibles sur le site de la CNIL."
+competences: [c6]
 ---
 
 ## Contexte
 
-Qui a demandé quoi, dans quelle organisation, et pourquoi c'était nécessaire.
+L’attestation du RGPD était obligatoire dans le cadre de notre formation, nous devions donc suivre les quatre modules et les apprendre afin de comprendre l’importance de la protection des données personnelles.
 
 ## Conditions et moyens
 
-Le matériel, les logiciels, seul ou en équipe.
+A l'aide de mon ordinateur personnel et les ressources de la CNIL 
 
 ## Description de l'activité
 
-1. Première étape, avec la commande ou le réglage réellement employé.
-2. Deuxième étape.
+Apprentissage de 4 modules sur le RGPD et ses règles.
+
+1- Le RGPD et ses notions clés.
+
+2- les principes de la protections des données.
+
+3- Les responsabilités des acteurs. 
+
+4- Le DPO et les outils de la conformité.
 
 ## Productions et preuves
 
@@ -25,4 +32,4 @@ Le matériel, les logiciels, seul ou en équipe.
 
 ## Ce que j'en retiens
 
-Une difficulté rencontrée et la façon dont vous l'avez réglée.
+J’ai appris à mieux comprendre l’importance des données personnelles, comment les protéger, respecter la vie privée des utilisateurs et faire attention à la manière dont on utilise leurs informations.
