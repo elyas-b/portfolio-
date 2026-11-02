@@ -36,6 +36,10 @@ Apprentissage de 4 modules sur le RGPD et ses règles.
 
 ![Ce que montre la capture]({{ "/images/Certificat_4.png" | relative_url }})
 
+![Ce que montre la capture]({{ "/images/Certificat_5.png" | relative_url }})
+
+![Ce que montre la capture]({{ "/images/Attestation_de_suivi_2.png" | relative_url }})
+
 ## Ce que j'en retiens
 
 J’ai appris à mieux comprendre l’importance des données personnelles, comment les protéger, respecter la vie privée des utilisateurs et faire attention à la manière dont on utilise leurs informations.
